@@ -1,28 +1,60 @@
 const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+const dotenv = require('dotenv');
+const cors = require('cors'); 
+
+const User = require('./models/user');
+
+dotenv.config();
 
 
 const app = express();
 
+mongoose.connect(process.env.DATABASE, { useNewUrlParser: true, useUnifiedTopology: true }, (err)=>{
+    if(err){
+        console.log(err);
+    } else{
+        console.log("Connected to Database");
+    }
+})
+
 //MIDDLEWARES
+app.use(cors());
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
  
-//Retrieve data from server
-app.get('/', (req,res) => {
-    res.json("Hello Handmade Happiness");
-});
+//require apis
+const productRoutes = require('./routes/product');
+const categoryRoutes = require('./routes/category');
+const ownerRoutes = require('./routes/owner');
+const userRoutes = require('./routes/auth');
+const reviewRoutes = require('./routes/review');
+const addressRoutes = require('./routes/address');
+const paymentRoutes = require('./routes/payment');
+const orderRoutes = require('./routes/order');
+const searchRoutes = require('./routes/search');
 
-//Send data to the server
-app.post("/", (req,res) => {
-     console.log(req.body.name);
-})
+app.use("/api", productRoutes);
+app.use("/api", categoryRoutes);
+app.use("/api", ownerRoutes);
+app.use("/api", userRoutes);
+app.use("/api", reviewRoutes);
+app.use("/api", addressRoutes);
+app.use("/api", paymentRoutes);
+app.use("/api", orderRoutes);
+app.use("/api", searchRoutes);
+
+if(process.env.NODE_ENV === 'production'){
+    app.get(/.*/);
+}
 
 
 
-app.listen(3000, (err)=> {
+const port = process.env.port || 3000;
+app.listen(port, (err)=> {
     if(err){
         console.log(err);
     } else {

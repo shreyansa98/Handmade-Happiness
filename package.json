@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Sweetness delivered to your doorstep",
   "author": "",
-  "proxy": "http://localhost:3000",
+  "proxy": "http://localhost:8000",
   "private": true,
   "scripts": {
     "dev": "nuxt",

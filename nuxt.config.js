@@ -1,7 +1,7 @@
 const URL ='http://localhost:8000'
 const path = require("path");
 export default {
-  mode: 'universal',
+  mode: 'spa',
   router: {
     base: process.env.NODE_ENV === 'production' ? '/hh/' : '/',
     routerNameSplitter: '/',
@@ -84,13 +84,20 @@ export default {
   /*
   ** Build configuration
   */
-  build: {
-    /*
-    ** You can extend webpack config here
-    */
-    extend (config, ctx) {
+ build: {
+  /*
+   ** You can extend webpack config here
+   */
+  publicPath: process.env.NODE_ENV === 'production' ? '/assets/' : '',
+  extend(config, ctx) { },
+  postcss: {
+    preset: {
+      features: {
+        customProperties: false
+      }
     }
-  },
+  }
+},
 
   auth: {
     strategies: {

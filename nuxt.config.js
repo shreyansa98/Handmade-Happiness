@@ -2,6 +2,10 @@ const URL ='http://localhost:8000'
 const path = require("path");
 export default {
   mode: 'universal',
+  router: {
+    base: process.env.NODE_ENV === 'production' ? '/hh/' : '/',
+    routerNameSplitter: '/',
+  },
   /*
   ** Headers of the page
   */

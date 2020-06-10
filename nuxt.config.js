@@ -1,4 +1,4 @@
-const URL ='http://localhost:8000'
+const URL ='https://handmadehappiness.herokuapp.com'
 const path = require("path");
 export default {
   mode: 'spa',
@@ -64,7 +64,7 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    proxy: true,
+    proxy: false,
     baseURL : URL
   },
   server: {

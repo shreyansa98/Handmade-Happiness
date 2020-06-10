@@ -4,7 +4,7 @@
 
       <!-- <Slidebar/> -->
 
-    <a href="/"><img src="/img/logo.png" alt="logo" class="img-fluid" style="width: 280px; height: 38px"/></a>
+    <a href="/"><img src="https://handmade-happiness-v1.s3.ap-south-1.amazonaws.com/logo.png" alt="logo" class="img-fluid" style="width: 280px; height: 38px"/></a>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 

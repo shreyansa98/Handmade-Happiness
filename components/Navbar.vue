@@ -98,6 +98,8 @@
     
 </template>
 
+
+
 <script>
 import {  mapGetters } from "vuex";
 import Slidebar from "./Slidebar";

@@ -1,12 +1,12 @@
 /*CASCADING STYLE SHEET*/
-@font-face {
+/* @font-face {
   font-family: 'MyWebFont';
   src: url('../font/amazon-ember-regular-webfont.eot'); /* IE9 Compat Modes */
-  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../font/amazon-ember-regular-webfont.woff') format('woff'), /* Modern Browsers */
-       url('../font/amazon-ember-regular-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('../font/amazon-ember-bold-webfont.svg') format('svg'); /* Legacy iOS */
-}
+  /* src: url('webfont.eot?#iefix') format('embedded-opentype'), IE6-IE8 */
+       /* url('../font/amazon-ember-regular-webfont.woff') format('woff'), Modern Browsers */
+       /* url('../font/amazon-ember-regular-webfont.ttf')  format('truetype'), Safari, Android, iOS */
+       /* url('../font/amazon-ember-bold-webfont.svg') format('svg'); Legacy iOS */
+/* }  */
 
 body {
     font-size: 13px;
@@ -294,7 +294,7 @@ input[type=password]::placeholder{
     width: 20px;
 }
 .a-icon{
-    background-image: url("../img/icons2.png");
+    background-image: url("https://handmade-happiness-v1.s3.ap-south-1.amazonaws.com/icons2.png");
     -webkit-background-size: 400px 900px;
     background-size: 400px 900px;
     background-repeat: no-repeat;
@@ -501,7 +501,7 @@ header form input{
 }
 
 .nav-sprite{
-	background-image: url("../img/globalImg.png");
+	background-image: url("https://handmade-happiness-v1.s3.ap-south-1.amazonaws.com/globalImg.png");
 	background-position: 0 1000px;
     background-repeat: repeat-x;
 }
@@ -736,7 +736,7 @@ header form input{
     position: relative;
     top: 15px;
     left: 24px;
-    background: url("../img/icons.png");
+    background: url("https://handmade-happiness-v1.s3.ap-south-1.amazonaws.com/icons.png");
     background-position: -77px -24px;
     display: inline-block;
     width: 14px;
@@ -1232,7 +1232,7 @@ ul li.a-breadcrumb-divider {
 .a-spacing-top-small{
     margin-top: 10px!important;
 }
-..a-spacing-extra-large{
+.a-spacing-extra-large{
     margin-bottom: 26px!important;
 }
 .smallAuthorImageContainer{
@@ -1630,7 +1630,7 @@ ul li.a-breadcrumb-divider {
 .a-icon-share-email,
 .a-icon-share-twitter,
 .a-icon-share-pinterest{
-    background-image: url("../img/socialshare.png");
+    background-image: url("https://handmade-happiness-v1.s3.ap-south-1.amazonaws.com/socialshare.png");
     background-size: 512px 256px;
     background-repeat: no-repeat;
     vertical-align: top;
@@ -1925,7 +1925,6 @@ a.kicsPopover span {
     border-color: #c59f43 #846a29 #957321;
 }
 .pr-fb-icon{
-    background: url("../img/followIcons.png") -12px -3px ;
     width: 11px;
     height: 11px;
     position: relative;
@@ -2465,7 +2464,7 @@ button, input, textarea {
 }
 .review-body{
     margin-bottom: 10px!important;
-    margin-top: 10px !important
+    margin-top: 10px !important;
     font-size: 13px!important;
     line-height: 19px!important;
 }
@@ -2671,7 +2670,7 @@ button, input, textarea {
   line-height: 15px;
   margin: 0;
   padding-left: 20px;
-  padding-right: 20px;.
+  padding-right: 20px;
   color: #000;
   font-size: 13px;
   text-align: center;
@@ -2699,7 +2698,7 @@ a.action-button:link{
     width: 230px;
     display: block;
     background-position: -10px -170px;
-    background-image: url("../img/btn-bg.png");
+    /* background-image: url("../img/btn-bg.png"); */
 }
 .action-inner, 
 a.action-button:active .action-inner, 
@@ -2894,7 +2893,7 @@ div.navFooterLine {
     color: #CCC;
 }
 .nav-arrow.icp-up-down-arrow {
-    background: url(https://m.media-amazon.com/images/G/01/AUIClients/InternationalCustomerPref…ncesNavAssets-icp_sprite-7d1bfde…._V2_.png);
+    background: url("https://m.media-amazon.com/images/G/01/AUIClients/InternationalCustomerPref…ncesNavAssets-icp_sprite-7d1bfde…._V2_.png");
     width: 12px;
     height: 12px;
     background-position: -77px -80px;
@@ -3086,7 +3085,7 @@ td .nav_a:hover{
     cursor: pointer!important;
 }
 .srSprite {
-    background-image: url("../img/icons4.png");
+    background-image: url("https://handmade-happiness-v1.s3.ap-south-1.amazonaws.com/icons4.png");
     background-repeat: no-repeat;
 }
 .leftNav .backArrow {
@@ -3245,7 +3244,7 @@ p a:link {
     margin-left: 10px;
 }
 .relatedItemsHeader a:after{
-    background-image: url("../img/icons2.png");
+    background-image: url("https://handmade-happiness-v1.s3.ap-south-1.amazonaws.com/icons2.png");
     -webkit-background-size: 400px 900px;
     background-size: 400px 900px;
     background-repeat: no-repeat;
@@ -4102,7 +4101,7 @@ i.checkout-giftbox-icon {
     background-position: 0 0;
 }
 .checkout-giftbox-icon {
-    background-image: url(../img/gift.png)!important;
+    background-image: url("https://handmade-happiness-v1.s3.ap-south-1.amazonaws.com/gift.png")!important;
     background-repeat: no-repeat;
     background-size: 14px 14px;
     display: inline-block;

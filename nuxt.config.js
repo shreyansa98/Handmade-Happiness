@@ -17,12 +17,16 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel:"stylesheet", href:"https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" },
-      { rel: 'stylesheet', href: '/css/font-awesome/css/bootstrap.css' },
-      { rel: 'stylesheet', href: '/css/font-awesome/css/all.css' },
+      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-vue/2.15.0/bootstrap-vue.css' },
+      // { rel: 'stylesheet', href: '/css/font-awesome/css/all.css' },
       { rel: 'stylesheet', href: '/css/default.css' }
+      // { rel: 'stylesheet', href: 'https://raw.githubusercontent.com/shreyansa98/hh/master/static/css/default.css' }
     ]
+  },
+  bootstrapVue: {
+    icons: true // Install the IconsPlugin (in addition to BootStrapVue plugin
   },
   /*
   ** Customize the progress-bar color

@@ -7,16 +7,13 @@
         <div>
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                 <!-- Total Customer reviews -->
-                <a href="#" class="a-color-base">
-                  <h2>{{product.reviews.length}} customer reviews</h2>
-                </a>
+                  <h4>{{product.reviews.length}} customer reviews</h4>
                 <div class="cr-widget-ACR">
                   <span>
                     <star-rating :rating="product.averageRating" :show-rating="false" :glow="1" :border-width="1" :rounded-corners="true" :read-only="true" :star-size="18" :star-points="[23,2,14,17,0,19,10,34,7,50,23,43,38,50,36,34,46,19,31,17]">
                     </star-rating>
-                    <br/>
                     <p>
-                      {{product.averageRating.toFixed(1)}} Stars out of 5
+                      <small>{{product.averageRating.toFixed(1)}} Stars out of 5</small>
                     </p>
                   </span>
                 </div>
@@ -32,7 +29,7 @@
                     style="position:relative; height:300px; overflow-y:scroll; width: 100%;"
                   >
                 <div class="reviews-image-gallery">
-                  <h3>Customer images</h3>
+                  <h5>Customer images</h5>
                   <!-- Review Images -->
                   <div class="a-row a-spacing-top-small"></div>
                   <div class="a-spacing-small a-spacing-top-small">
@@ -44,8 +41,8 @@
     </b-card>
   </div>
             </template>
-
-          <h3 class="a-spacing-micro a-spacing-top-medium">Review this product</h3>
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <h4 class="mt-2">Review this product</h4>
           <div class="a-row a-spacing-large">Share your thoughts with other customers</div>
           <div class="a-row">
             <!-- Link to another Review page -->
@@ -61,9 +58,10 @@
               <hr class="mt-4 a-spacing-large" />
             </div>
           </div>
+</div>
 
 <template>
-  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-5">
     <b-card no-body>
 
       <b-card-body
@@ -84,31 +82,35 @@
                     </div>
                     <!-- Review Owner -->
                     <div class="profile-content">
-                      <span class="a-profile-name">{{review.user.name}}</span>
+                      <span class="a-profile-name"><small>{{review.user.name}}</small></span>
                     </div>
                   </a>
                 </div>
                 <div class="a-row">
                   <!-- Review Star -->
-                  <a href="#">
+                  <div class="review-title">{{review.headline}}</div>
+                  <no-ssr>
+                                   <star-rating :rating="review.rating" :show-rating="false" :glow="1" :border-width="1" :rounded-corners="true" :read-only="true" :star-size="9" :star-points="[23,2,14,17,0,19,10,34,7,50,23,43,38,50,36,34,46,19,31,17]">
+
+                                   </star-rating>
+                                 </no-ssr>
+                  <!-- <a href="#">
                     <i class="fas fa-star" v-for="i in review.rating" :key="i"></i> 
-                  </a>
-                  <span class="a-letter-space"></span>
+                  </a> -->
                   <!-- Review Headline -->
-                  <a href="#" class="review-title">{{review.headline}}</a>
+                  
                 </div>
-                <span class="review-date">June 28, 2016</span>
                 <div class="review-data">
-                  <span class="a-color-secondary">Format: Hardcover</span>
                   <div
                     style="width: 1px !important; height: 15px !important; background-color: #ddd; display: inline-block; margin: 0px 5px -3px 5px;"
                   ></div>
                   <span class="avp-badge a-color-state">Verified Purchase</span>
                 </div>
                 <!-- Review Body -->
-                <div class="review-body">
+                <div class="review-body mt-2 mb-2">
                   <span>{{review.body }}</span>
                 </div>
+                <hr style="margin-top: 10px;" />
               </div>
               <!-- Reviews -->
             </div>

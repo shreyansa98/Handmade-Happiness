@@ -2,23 +2,15 @@
     <main>
         <!-- Breadcrumbs -->
         <div class="a-spacing-top-medium"></div>
-        <div class="container">
+        <div class="container mt-2 mb-2">
             <div class="wayfinding-breadcrumbs-container">
-                <ul class="a-unordered-list a-horizontal a-size-small">
-                    <li>
                         <span class="a-list-item" >
-                            <a href="#" class="link-normal a-color-tertiary">{{product.category.type}}</a>
+                            {{product.category.type}}
                         </span>
-                    </li>
-                    <li>
                          <span class="a-list-item">></span>
-                    </li>
-                    <li>
                         <span class="a-list-item" >
-                            <a href="#" class="link-normal a-color-tertiary">{{product.title}}</a>
+                            {{product.title}}
                         </span>
-                    </li>
-                </ul>
             </div>
         </div>
 
@@ -52,6 +44,7 @@
 
                                    </star-rating>
                                  </no-ssr>
+                                 <p class="card-text mt-1"><small class="text-muted">{{product.averageRating.toFixed(1)}} Stars out of 5 </small> </p>
                             </div>
                             <hr style="margin-top: 10px;" />
                             <!-- Description -->
@@ -70,11 +63,11 @@
                                     <div class="clearfix">
 
                                         <!-- Product Price -->
-                                        <div class="float-right">
+                                        <h4 class="float-right">
                                             <span class="a-size-medium a-color-price offer-price a-text-normal">
                                                 Rs {{product.price}}
                                             </span>
-                                        </div>
+                                        </h4>
                                     </div>
                                 </div>
                                  <div class="a-section a-spacing-small a-spacing-top-micro">
@@ -84,48 +77,31 @@
                                  </div>
                                  <div class="a-section a-spacing-small">
                                      <div class="a-section a-spacing-none">
-                                         <span class="a-size-medium a-color-success">In Stock</span>
+                                         <span class="a-size-medium a-color-success float-right">In Stock</span>
                                      </div>
                                      <div class="a-section a-spacing-mini">Ships from and sold by HandmadeHappiness.com</div>
                                  </div>
 
                                  <div class="a-section">
                                      <div class="a-button-stack" @click="addProductToCart(product)">
-                                          <span class="a-spacing-small a-button-primary a-button-icon">
-                                              <span class="a-button-inner">
-                                                  <i class="a-icon a-icon-cart"></i>
-                                                  <input type="submit" name="submit.add-to-cart" class="a-button-input"/>
-                                                   <span class="a-button-text">Add to Cart</span>
-                                              </span>
-                                          </span>
+                                                   <button type="button" name="submit.add-to-cart" class="btn btn-secondary btn-sm btn-block mt-2" style="outline: none">Add to Cart</button>
                                      </div>
                                      <template v-if="getCartLength">
-                                                  <nuxt-link to="/cart">
-                                     <div class="a-button-stack">
-                                          <span class="a-spacing-small a-button-primary a-button-icon">
-                                              <span class="a-button-inner">
-                                                  <i class="a-icon a-icon-buynow"></i>
-
-                                                  
-                                                  <input type="submit" name="submit.add-to-cart" class="a-button-input"/>
-                                                   <span class="a-button-text">Buy Now</span>
-                                                   
-                                              </span>
-                                          </span>
-                                     </div>
-                                     </nuxt-link>
+                                        <a href="/cart">
+                                            <button type="button" name="submit.add-to-cart" class="btn btn-secondary btn-sm btn-block mt-2" style="outline: none">Buy Now</button>
+                                        </a>
                                                    </template>
                                  </div>
 
                                  <hr />
                                  <template v-if="$auth.$state.loggedIn">
                                 <span class="a-declarative">
-                                    <nuxt-link to="/address" class="a-link-normal">
+                                    <a href="/address" class="a-link-normal">
                                         <div class="a-row a-spacing-mini">
                                             <i class="fal fal-map-market-alt"></i>
                                             <span class="a-size-small">Deliver to {{$auth.$state.user.address.city}}</span>
                                         </div>
-                                    </nuxt-link>
+                                    </a>
                                 </span>
                                 </template>
                                 <br/>

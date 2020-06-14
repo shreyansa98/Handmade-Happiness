@@ -30,7 +30,7 @@
                             <div class="a-spacing-top-large">
                                 <span class="a-button-register">
                                     <span class="a-button-inner">
-                                        <span class="a-button-text" @click="onUpdateProfile">
+                                        <span class="btn btn-dark btn-small mt-4" @click="onUpdateProfile">
                                             Update Profile
                                         </span>
                                     </span>

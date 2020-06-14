@@ -3,54 +3,34 @@
   <main>
     <!--REGISTER ADDRESS-->
     <div class="registerAddress mt-3">
-      <div class="container-fluid c-section">
+      <div class="container c-section">
         <div class="row">
           <div class="col-sm-2"></div>
           <div class="col-sm-10">
             <div class="a-section a-spacing-medium">
               <div class="a-subheader a-breadcrumb a-spacing-small">
-                <ul>
-                  <li>
-                    <a href="#">
-                      <span>Your Account</span>
-                    </a>
-                  </li>
-                  <li class="a-breadcrumb-divider">›</li>
-                  <li class="active">
-                    <a href="#">
-                      <span>Your Adresses</span>
-                    </a>
-                  </li>
-                </ul>
+                      <small>Your Account > </small>
+                      <small>Your Adresses</small>
               </div>
-              <h1 class="a-spacing-medium a-spacing-top-medium">Your Addresses</h1>
-              <!-- Message from Server -->
-              <div class="a-section a-spacing-none a-spacing-top-small">
-                <b>{{message}}</b>
-              </div>
-              <div class="a-spacing-double-large">
-                <div class="row a-spacing-micro">
-                  <div class="col-lg-4 col-md-5 col-sm-12 pb-2">
-                    <nuxt-link
-                      to="/address/add"
-                      class="a-link-normal add-new-address-button"
+              <h3 class="a-spacing-medium a-spacing-top-medium">Your Addresses</h3>
+              <h6><a href="/address/add"
                       style="text-decoration:none;"
                     >
-                      <div class="a-box first-desktop-address-tile">
-                        <div class="a-box-inner a-padding-extra-large">
-                          <i class="far fa-plus"></i>
-                          <h2 class="a-color-tertiary">Add Address</h2>
-                        </div>
-                      </div>
-                    </nuxt-link>
-                  </div>
+                      Add Address
+                    </a></h6>
+              <!-- Message from Server -->
+              <div class="a-section a-spacing-none a-spacing-top-small mt-2 text-muted">
+                {{message}}
+              </div>
+              <br/>
+              <div class="a-spacing-double-large mt-2">
                   <!-- Address -->
                   <div class="col-lg-4 col-md-4 col-sm-12 pl-md-0 pb-2" v-for="(address, index) in addresses" :key="address._id">
-                    <div class="a-box a-spacing-none normal-desktop-address-tile">
+                    <div class="a-box a-spacing-none normal-desktop-address-tile border-left border-bottom mt-2 pl-2">
                       <div class="a-box-inner a-padding-none">
                         <div class="address-section-no-default">
                           <div class="a-spacing-small">
-                            <ul class="a-unordered-list a-nostyle a-vertical">
+                            <ul class="a-unordered-list a-nostyle a-vertical" style="list-style-type:none;">
                               <li>
                                 <h5>
                                   <!-- Address Fullname -->
@@ -62,9 +42,9 @@
                               <!-- Address street address -->
                               <li>{{address.streetAddress}}</li>
                               <!-- Address city state zip code -->
-                              <li>{{address.city}}, {{address.state}} {{address.pincode}}</li>
+                              <li>{{address.city}}, {{address.state}}</li>
                               <!-- Address country -->
-                              <li>{{address.country}}</li>
+                              <li>{{address.country}}, {{address.pincode}}</li>
                               <!-- Address Phone number -->
                               <li>Phone number: {{address.phoneNumber}}</li>
                             </ul>
@@ -73,7 +53,7 @@
                       </div>
                       <!-- Update Button -->
                       <div class="edit-address-desktop-link">
-                        <nuxt-link :to="`/address/${address._id}`">Edit</nuxt-link>
+                        <a :href="`/address/${address._id}`">Edit</a>
                         &nbsp; | &nbsp;
                         <!-- Delete Button -->
                         <a href="#" @click="onDeleteAddress(address._id, index)">Delete</a>
@@ -82,6 +62,7 @@
                         <a href="#" @click="onSetDefault(address._id)">Set as Default</a>
                       </div>
                     </div>
+
                   </div>
                   <div class="col-lg-4 col-md-3 col-sm-12"></div>
                 </div>
@@ -90,7 +71,6 @@
           </div>
         </div>
       </div>
-    </div>
     <!--/REGISTER ADDRESS-->
   </main>
   <!--/MAIN-->

@@ -1,25 +1,21 @@
 <template>
-<body>
-  
-  <!--SHIPPING ADDRESS-->
-  <div class="container-fluid">
-    <b-navbar toggleable="lg" type="dark" variant="dark">
-    <a href="/"><img src="/img/logo.png" alt="logo" class="img-fluid" style="width: 280px; height: 38px"/></a>
-    </b-navbar>
+<main>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/"><img src="https://handmade-happiness-v1.s3.ap-south-1.amazonaws.com/logo.png" alt="logo" class="img-fluid" style="width: 240px; height: 33px"/></a>
+</nav>
 
-      <div class="container">
+      <div class="container mt-3">
     <div class="shipping-address">
       
       <div class="a-row">
-        <div class="a-size-large a-text-bold a-spacing-mini">Review your order</div>
-        <div class="a-row a-spacing-small a-size-mini"></div>
+        <div class="a-size-large a-text-bold a-spacing-mini border-bottom pb-1">Review your order</div>
       </div>
-      <div class="row">
+      <div class="row mt-2">
         <div class="col-xl-9 col-lg-8 col-md-9 col-sm-12">
           <div class="a-row a-spacing-large"></div>
           <div class="spc-top a-box a-spacing-small">
             <div class="a-box-inner">
-              <div class="row">
+              <div class="row border-left border-bottom m-2">
                 <div class="col-xl-4 col-lg-6 col-sm-6 col-6">
                   <div class="a-spacing-base">
                     <div class="a-row">
@@ -33,13 +29,12 @@
                     <div class="a-row">
                       <div class="displayAddressDiv">
                         <!-- User's address -->
-                        <ul class="displayAddressUL">
+                        <ul class="displayAddressUL" style="list-style-type:none;">
                           <li>{{$auth.$state.user.address.fullName}}</li>
                           <li>{{$auth.$state.user.address.houseNumber}}</li>
                           <li>{{$auth.$state.user.address.streetAddress}}</li>
                           <li>{{$auth.$state.user.address.city}}</li>
-                          <li>{{$auth.$state.user.address.country}},</li>
-                          <li>{{$auth.$state.user.address.pincode}}</li>
+                          <li>{{$auth.$state.user.address.country}}, {{$auth.$state.user.address.pincode}}</li>
                           <li>
                             Phone:
                             <span dir="ltr">{{$auth.$state.user.address.phoneNumber}}</span>
@@ -59,7 +54,7 @@
                 <div
                   class="a-row a-color-state a-text-bold a-size-medium a-spacing-small"
                 >Estimated delivery: {{estimatedDelivery}}</div>
-                <div class="row">
+                <div class="row mt-2">
                   <!-- Cart -->
                   <div class="col-xl-6 col-lg-7 col-sm-6 col-12">
                     <div class="a-row a-spacing-base" v-for="product in getCart" :key="product._id">
@@ -73,8 +68,6 @@
                           <div class="a-row">
                             <strong>{{product.title}}</strong>
                           </div>
-                          <!-- Product's owner name -->
-                          <div class="a-row a-size-small">by {{product.owner.name}}</div>
                           <div class="a-row">
                             <!-- Product's price -->
                             <span class="a-color-price a-spacing-micro">
@@ -82,17 +75,12 @@
                             </span>
                           </div>
                           <div class="a-row">
-                            <span class="availability a-color-success">In Stock.</span>
-                          </div>
-                          <div class="a-row">
                             <!-- Product's quantity -->
                             <strong>Quantity: {{product.quantity}}</strong>
                           </div>
-                          <div
-                            class="a-row a-color-secondary a-size-small"
-                          >Sold by:&nbsp;HandmadeHappiness.com, Inc</div>
                         </div>
                       </div>
+                      <hr/>
                     </div>
                   </div>
                   <div class="col-xl-6 col-lg-5 col-sm-6 col-12">
@@ -135,12 +123,12 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-3 col-lg-4 col-md-3 col-sm-12 pl-0">
+        <div class="col-xl-3 col-lg-4 col-md-3 col-sm-12 p-2 pt-4">
           <div class="a-box-group">
             <div class="a-box a-first">
               <div class="a-box-inner">
                 <div class="a-row a-spacing-micro">
-                    <span @click="onPurchase" class="a-button-place-order">Place your order</span>
+                    <span @click="onPurchase" class="btn btn-light btn-small border mb-2 mt-2" style="width: 100%">Place your order</span>
                 </div>
                 <div class="a-row a-spacing-small a-size-small a-text-center">
                   By placing your order, you agree to HandmadeHappiness's
@@ -183,6 +171,7 @@
           </div>
         </div>
       </div>
+      <hr/>
       <div class="a-row a-spacing-small a-spacing-top-small">
         <p class="a-color-secondary a-size-mini">
           Do you need help? Explore our
@@ -208,8 +197,7 @@
       </p>
     </div>
     </div>
-  </div>
-</body>
+</main>
 
 </template>
 

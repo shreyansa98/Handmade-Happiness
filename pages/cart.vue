@@ -12,10 +12,11 @@
               <form action="#" method="post">
                 <div class="sc-list-head">
                   <div class="text-right a-spacing-top-micro">
-                    <span class="a-color-secondary">Price</span>
+                    <h6 class="a-color-secondary mr-4">Price</h6>
                   </div>
                 </div>
                 <!-- List of the item -->
+                <div class="border mb-4 p-2">
                 <div class="sc-list-body" v-for="product in getCart" :key="product._id">
                   <div class="sc-list-item-border">
                     <div class="a-row a-spacing-top-base a-spacing-base">
@@ -29,20 +30,9 @@
                         <div class="col-sm-8 col-8">
                           <!-- Product's Title -->
                           <div class="a-spacing-mini">
-                            <a
-                              href="#"
+                            <h5
                               class="a-link-normal a-size-medium a-text-bold"
-                            >{{product.title}}</a>
-                            <!-- Product's Owner name -->
-                            <span class="a-size-base sc-product-creator">by {{product.owner.name}}</span>
-                          </div>
-                          
-                          <div>
-                            <span
-                              class="a-size-small a-color-success sc-product-availability"
-                            >In Stock</span>
-                          </div>
-                          <div class="a-spacing-small">
+                            >{{product.title}}</h5>
                           </div>
                           <div class="sc-action-links">
                             <select @change="onChangeQuantity($event, product)">
@@ -62,56 +52,32 @@
                         <div class="col-sm-2 col-2 tr sm-txt-r">
                           <!-- Product's Price -->
                           <p class="a-spacing-small">
-                            <span
-                              class="a-size-medium a-color-price sc-price sc-white-space-nowrap sc-product-price sc-price-sign a-text-bold"
-                            >Rs {{ product.price * product.quantity }}</span>
+                            <h6
+                              class="a-size-medium a-color-price sc-price sc-white-space-nowrap sc-product-price sc-price-sign a-text-bold float-right"
+                            >Rs {{ product.price * product.quantity }}</h6>
                           </p>
                         </div>
                       </div>
                     </div>
                   </div>
+                   <hr style="margin-top: 10px;" />
+                </div>
                 </div>
                 <!-- List of the item -->
 
                 <div class="text-right">
                   <!-- Cart Subtotal -->
-                  <p class="a-spacing-none a-spacing-top-mini">
+                  <h6 class="a-spacing-none a-spacing-top-mini">
                     <span class="a-size-medium">Subtotal ({{getCartLength}} item)</span>
                     <span class="a-color-price a-text-bold">
                       <!-- Cart Total Price -->
                       <span class="a-size-medium a-color-price">Rs {{getCartTotalPrice}}</span>
                     </span>
-                  </p>
+                  </h6>
                 </div>
               </form>
             </div>
-            <div class="a-box-group" style="margin-bottom: 14px; width: 100%">
-              <div class="a-box a-color-alternate-background">
-                <div class="a-box-inner">
-                  <div class="a-spacing-mini">
-                    <p class="a-spacing-none a-spacing-top-none">
-                      <!-- Cart Subtotal -->
-                      <span class="a-size-medium">
-                        <span>Subtotal ({{getCartLength}}  item):</span>
-                        <span class="a-color-price a-text-bold">
-                          <!-- Cart Total Price  -->
-                          <span class="a-size-medium a-color-price">Rs {{getCartTotalPrice}}</span>
-                        </span>
-                      </span>
-                    </p>
-                  </div>
-                  <div>
-                    <div class="a-spacing-small">
-                          </div>
-                    <span class="a-spacing-small a-button-primary a-button-icon">
-                      <span class="a-button-inner">
-                        <a href="/placeorder" class="a-button-text">Proceed to checkout</a>
-                      </span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <a href="/placeorder" class="btn btn-light btn-small mx-auto mb-4">Proceed to checkout</a>
 
         </div>
       </div>

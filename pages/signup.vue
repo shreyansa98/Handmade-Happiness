@@ -17,12 +17,12 @@
                                      <input type="text" id="ap_customer_name" class="a-input-text form-control auth-autofocus auth-required-field auth-contact-verification-request-info" v-model="name"/>
                                  </div>
                                  <!-- Email  -->
-                                 <div class="a-row a-spacing-base">
+                                 <div class="a-row a-spacing-base mt-2">
                                      <label for="ap_customer_name" class="a-form-label">Email</label>
                                      <input type="email" id="ap_customer_name" class="a-input-text form-control auth-autofocus auth-required-field auth-contact-verification-request-info" v-model="email"/>
                                  </div>
                                  <!-- Password  -->
-                                 <div class="a-row a-spacing-base">
+                                 <div class="a-row a-spacing-base mt-2">
                                      <label for="ap_customer_name" class="a-form-label">Password</label>
                                      <input type="password" id="ap_customer_name" class="a-input-text form-control auth-autofocus auth-required-field auth-contact-verification-request-info" v-model="password"/>
                                      <div class="a-alert-container">
@@ -33,10 +33,10 @@
                                 <div class="a-row a-spacing-extra-large mb-4">
                                     <span class="a-button-primary">
                                         <span class="a-button-inner">
-                                            <span class="a-button-text" @click="onSignup">Create your Account</span>
+                                            <span class="btn btn-dark btn-small mt-4" @click="onSignup">Create your Account</span>
                                         </span>
                                     </span>
-                                    <div class="a-row a-spacing-top-medium a-size-small">
+                                    <div class="a-row a-spacing-top-medium a-size-small mt-4">
                                         <b>
                                             By creating an account, you agree to Handmade Happiness's
                                             <a href="#">Conditons of use</a> and 
@@ -45,10 +45,10 @@
                                     </div>
                                 </div>
                                 <hr/>
-                                <div class="a-row">
+                                <div class="a-row mb-4">
                                     <b>
                                         Already have an account?
-                                        <nuxt-link to="/login" class="a-link-emphasis">Sign In</nuxt-link>
+                                        <a href="/login" class="a-link-emphasis">Sign In</a>
                                     </b>
                                 </div>
                                  

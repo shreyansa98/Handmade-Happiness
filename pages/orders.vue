@@ -6,59 +6,29 @@
       <div class="row">
         <div class="col-xl-2 col-lg-1 col-md-12"></div>
         <div class="col-xl-8 col-lg-9 col-md-12">
-          <div class="a-spacing-large a-spacing-top-small a-subheader a-breadcrumb">
-            <ul class="a-unordered-list a-nostyle a-horizontal">
-              <li>
-                <span class="a-list-item">
-                  <a class="a-link-normal">
-                    <span>Your Account</span>
-                  </a>
-                </span>
-              </li>
-              <li class="a-breadcrumb-divider">›</li>
-              <li>
-                <span class="a-list-item">
-                  <span class="a-color-state">Your Orders</span>
-                </span>
-              </li>
-            </ul>
+          <div class="a-spacing-large a-spacing-top-small a-subheader a-breadcrumb mt-2">
+                    <small>Your Account > </small>
+                  <small class="a-color-state">Your Orders</small>
           </div>
-          <div class="row">
-            <div class="col-md-6 col-sm-5 col-12">
-              <h1 class="a-spacing-medium">Your Orders</h1>
-            </div>
-          </div>
-          <div class="a-row a-spacing-medium custom-view-options">
-            <ul class="a-unordered-list a-nostyle a-horizontal">
-              <li role="tab">
-                <span class="a-list-item"></span>
-              </li>
-              <li class="selected" role="tab">
-                <span class="a-list-item">
-                  <span class="item">Orders</span>
-                </span>
-              </li>
-            </ul>
-          </div>
+          <h3>Order history</h3>
 
           <div class="orderContent a-spacing a-spacing-top-medium" v-for="order in orders" :key="order._id">
-            <div class="orderContentHeader">
+            <div class="orderContentHeader p-2 mt-2 border-bottom" style="background: #F7F7F7">
               <div class="row">
                 <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
                   <div class="a-row">
-                    <span class="a-size-mini a-color-secondary">TOTAL</span>
+                    <span class="a-size-mini a-color-secondary">Total</span>
                     <br />
                     <span class="a-size-base a-text-bold a-color-secondary">Rs {{order.totalPrice}}</span>
                   </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-3">
                   <div class="a-row">
-                    <span class="a-size-mini a-color-secondary">SHIP TO</span>
+                    <span class="a-size-mini a-color-secondary">Ship To</span>
                     <br />
                     <!-- Owner's name -->
-                    <a href class="a-size-base font-weight-bold a-link-normal">
+                    <a href="/address" class="a-size-base a-link-normal">
                       {{ $auth.$state.user.name }}
-                      <i class="far fa-chevron-down"></i>
                     </a>
                   </div>
                 </div>
@@ -66,12 +36,6 @@
                   <div class="a-row">
                     <span class="a-size-mini a-color-secondary">ORDER # {{order._id}}</span>
                     <br />
-                    <a href="#" class="a-size-base font-weight-bold a-link-normal">Order Details</a>
-                    &nbsp;
-                    <div
-                      style="display: inline-block; background-color: #ddd; height: 15px; width: 2px; margin-bottom: -3px;"
-                    ></div>&nbsp;
-                    <a href="#" class="a-size-base font-weight-bold a-link-normal">Invoice</a>
                   </div>
                 </div>
               </div>
@@ -79,13 +43,13 @@
             <!-- Orders body -->
             <div class="orderContentBodyAlt">
               <div class="a-row">
-                <h1
-                  class="a-size-medium a-text-bold"
+                <h6
+                  class="a-size-medium a-text-bold mt-2"
                   style="color: #111 !important;font-family: 'MyWebFont',Arial,sans-serif !important; "
                 >
                   <!-- Estimated Delivery -->
                   Estimated Delivery - {{ order.estimatedDelivery}}
-                </h1>
+                </h6>
               </div>
               <!-- List of products from order -->
               <div v-for="product in order.products" :key="product._id">
@@ -125,6 +89,7 @@
                     </div>
                   </div>
                 </div>
+                <hr/>
               </div>
             </div>
           </div>

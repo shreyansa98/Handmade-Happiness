@@ -14,16 +14,19 @@
 
 <form novalidate="novalidate" onsubmit="return false;" class="searchbox sbx-amazon">
   <div role="search" class="sbx-amazon__wrapper">
-    <input type="search" name="search" placeholder="Search" autocomplete="off" required="required" class="sbx-amazon__input" v-model="query">
-    <button type="submit" title="Submit your search query." class="sbx-amazon__submit" @click="onSearch">
-      <svg role="img" aria-label="Search">
+    <input type="search" name="search" placeholder="Search" autocomplete="off" required="required" class="form-control mr-sm-2t" v-model="query">
+    <button type="submit" title="Submit your search query." class="btn btn-outline-light my-2 my-sm-0" @click="onSearch" style="width: 51px; height: 38px">
+      <!-- <i class="fas fa-search" style="color: white"></i> -->
+      Go
+      <!-- <fa :icon="['fas', 'search']"/> -->
+      <!-- <svg role="img" aria-label="Search">
         <use xlink:href="#sbx-icon-search-11"></use>
-      </svg>
-    </button>
-    <button type="reset" title="Clear the search query." class="sbx-amazon__reset">
+      </svg> -->
+    <!-- </button> -->
+    <!-- <button type="reset" title="Clear the search query." class="sbx-amazon__reset">
       <svg role="img" aria-label="Reset">
         <use xlink:href="#sbx-icon-clear-2"></use>
-      </svg>
+      </svg> -->
     </button>
   </div>
 </form>

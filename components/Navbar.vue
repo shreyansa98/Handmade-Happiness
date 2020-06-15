@@ -36,14 +36,14 @@
       </li>
       <li class="nav-item">
         <template v-if="$auth.$state.loggedIn">
-                    <a href="/profile" class="nav-link">
+                    <nuxt-link to="/profile" class="nav-link">
                         Hello, {{$auth.$state.user.name}}
-                    </a>
+                    </nuxt-link>
                 </template>
                 <template v-else>
-                    <a href="/login" class="nav-link">
+                    <nuxt-link to="/login" class="nav-link">
                         Hello Sign in
-                    </a>
+                    </nuxt-link>
                 </template>
       </li>
       <template v-if="$auth.$state.loggedIn">

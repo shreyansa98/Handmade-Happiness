@@ -11,9 +11,9 @@
                             <img :src="product.photo" class="card-img-top">
                             <div class="card-body">
                                 <h5 class="card-title">
-                                    <a :href="`/products/${product._id}`">
+                                    <nuxt-link :to="`/products/${product._id}`">
                                                 {{product.title}}
-                                     </a>
+                                    </nuxt-link>
                                 </h5>
                                 <p class="card-text">
                                             <no-ssr>

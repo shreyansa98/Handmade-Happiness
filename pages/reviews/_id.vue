@@ -9,7 +9,7 @@
           <div class="col-sm-8">
             <div class="a-spacing-top-medium">
               <h1 class="a-spacing-base">
-                <b>Create Review</b>
+                Create Review
               </h1>
               <div class="row">
                 <!-- Product Photo -->
@@ -30,16 +30,15 @@
                 <!-- Rating -->
                 <star-rating v-model="rating"></star-rating>
               </div>
-              <div class="a-row a-spacing-top-large">
-                <h2>Add photo or video</h2>
+              <div class="a-row a-spacing-top-large mt-3">
+                <h4>Add photo or video</h4>
                 <p
-                  style="font-size: 14px; font-weight: 700;"
+                  style="font-size: 14px;"
                 >Shoppers find images and videos more helpful than text alone.</p>
               </div>
               <div class="a-row a-spacing-top-medium">
                 <!-- Choose a Photo -->
                 <label class="choosefile-button">
-                  <i class="fal fa-plus"></i>
                   <input type="file" @change="onFileSelected" />
                 </label>
                 <p>{{fileName}}</p>
@@ -48,7 +47,7 @@
               <hr />
               <!-- Headline -->
               <div class="headline a-spacing-large">
-                <h2 class="a-spacing-base">Add a headline</h2>
+                <h4 class="a-spacing-base">Add a headline</h4>
                 <input
                   type="text"
                   class="a-input-text"
@@ -58,7 +57,7 @@
                 />
               </div>
               <!-- Body -->
-              <div class="a-spacing-base">
+              <div class="a-spacing-base mt-2">
                 <h2 class="a-spacing-base">Write your review</h2>
                 <textarea
                   placeholder="What do you like or dislike? What did you see this product for?"
@@ -75,9 +74,11 @@
                 style="font-size: 14px; font-weight: 700;"
               >This is how you'll appear to other customers:</p>
               <div class="media a-spacing-top-large">
-                <div class="media-left">
-                  <img src="/img/avatar.png" class="img-fluid" style="width: 50px;" />
-                </div>
+                <div class="profile-avatar">
+                      <img
+                        src="https://images-na.ssl-images-amazon.com/images/S/amazon-avatars-global/default._CR0,0,1024,1024_SX48_.png"
+                      />
+                    </div>
                 <div class="media-body pl-3 pt-2">
                   <input type="text" class="a-input-text" style="width: 100%;" :value="$auth.$state.user.name" />
                 </div>
@@ -87,11 +88,7 @@
               <span class="a-color-tertiary">Don't worry, you can always change this on your profile</span>
             </div>
             <div class="a-row text-right a-spacing-top-large">
-              <span class="a-button-register">
-                <span class="a-button-inner">
-                  <span class="a-button-text" @click="onAddReview">Submit</span>
-                </span>
-              </span>
+                  <div class="btn btn-dark btn-small" @click="onAddReview">Submit</div>
             </div>
           </div>
           <div class="col-sm-2"></div>
@@ -146,7 +143,12 @@ export default {
                 data.append("body", this.body);
                 data.append("rating", this.rating);
                 data.append("photo", this.selectedFile, this.selectedFile.name);
-
+                // var data = {
+                //   "headline": this.headline,
+                //   "body": this.body,
+                //   "rating": this.rating,
+                //   "photo": [this.selectedFile, this.selectedFile.name]
+                //   }
                 let response = await this.$axios.$post(`/api/reviews/${this.$route.params.id}`, data);
 
                 if(response.success){
@@ -155,7 +157,7 @@ export default {
 
                 
             } catch(err){
-                console.log(err);
+                console.log(err.response);
             }
         }
     }

@@ -77,7 +77,7 @@
                 </div>
               </form>
             </div>
-            <a href="/placeorder" class="btn btn-light btn-small mx-auto mb-4">Proceed to checkout</a>
+            <nuxt-link to="/placeorder" class="btn btn-light btn-small mx-auto mb-4">Proceed to checkout</nuxt-link>
 
         </div>
       </div>

@@ -82,11 +82,6 @@
                       <!-- Product price -->
                       <span class="a-size-mini a-color-price">Rs {{ product.productID.price }}</span>
                     </div>
-                    <br />
-                    <div class="a-row">
-                      <span class="a-button-buy-again">Buy it again</span>
-                      <span class="a-button-view-item">View your item</span>
-                    </div>
                   </div>
                 </div>
                 <hr/>

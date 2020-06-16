@@ -87,21 +87,21 @@
                                                    <button type="button" name="submit.add-to-cart" class="btn btn-secondary btn-sm btn-block mt-2" style="outline: none">Add to Cart</button>
                                      </div>
                                      <template v-if="getCartLength">
-                                        <a href="/cart">
+                                        <nuxt-link to="/cart">
                                             <button type="button" name="submit.add-to-cart" class="btn btn-secondary btn-sm btn-block mt-2" style="outline: none">Buy Now</button>
-                                        </a>
+                                        </nuxt-link>
                                                    </template>
                                  </div>
 
                                  <hr />
                                  <template v-if="$auth.$state.loggedIn">
                                 <span class="a-declarative">
-                                    <a href="/address" class="a-link-normal">
+                                    <nuxt-link to="/address" class="a-link-normal">
                                         <div class="a-row a-spacing-mini">
                                             <i class="fal fal-map-market-alt"></i>
                                             <span class="a-size-small">Deliver to {{$auth.$state.user.address.city}}</span>
                                         </div>
-                                    </a>
+                                    </nuxt-link>
                                 </span>
                                 </template>
                                 <br/>

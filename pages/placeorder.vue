@@ -22,7 +22,7 @@
                       <strong>
                         Shipping address
                         <small>
-                          <a href="/address">Change</a>
+                          <nuxt-link to="/address">Change</nuxt-link>
                         </small>
                       </strong>
                     </div>

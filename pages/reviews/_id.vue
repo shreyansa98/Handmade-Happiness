@@ -129,7 +129,7 @@ export default {
             headline: "",
             selectedFile: null,
             fileName: null
-        }
+        } 
     },
     methods: {
         onFileSelected(){

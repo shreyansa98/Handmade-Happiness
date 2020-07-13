@@ -29,6 +29,7 @@
                                     <span class="a-button-primary">
                                         <span class="a-button-inner">
                                             <span class="btn btn-dark btn-small mt-4" @click="onLogin">Login</span>
+                                            <span class="btn btn-dark btn-small mt-4" @click="google">Google</span>
                                         </span>
                                     </span>
                                     <div class="a-row a-spacing-top-medium a-size-small mt-4">
@@ -81,6 +82,14 @@ export default {
             } catch(err){
                 console.log(err);
             }
+         },
+         async google() {
+             try{
+                 this.$auth.loginWith('google')
+             }
+             catch(err){
+                 console.log(err);
+             }
          }
      }
 }

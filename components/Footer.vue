@@ -29,9 +29,19 @@
     </div>
   </footer> -->
   <!--/FOOTER-->
-  <footer class="py-3 bg-dark">
+  <footer class="footer" style="background-color: #417494">
         <div class="container">
             <p class="m-0 text-center text-white">Copyright © Handmade Happiness 2020</p>
         </div>
     </footer>
 </template>
+
+<style>
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+</style>

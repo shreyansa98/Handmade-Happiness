@@ -1,6 +1,6 @@
 <template>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <nuxt-link class="navbar-brand" to="/"><img src="https://handmade-happiness-v1.s3.ap-south-1.amazonaws.com/logo.png" alt="logo" class="img-fluid" style="width: 240px; height: 33px"/></nuxt-link>
+<nav class="navbar navbar-expand-lg navbar-dark" style="backgorund-color: #383734">
+  <a class="navbar-brand" href="/hh"><img src="https://handmade-happiness-v1.s3.ap-south-1.amazonaws.com/logo.png" alt="logo" class="img-fluid" style="width: 240px; height: 33px"/></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -53,7 +53,7 @@
       </template>
       <li class="nav-item">
           <template v-if="$auth.$state.loggedIn">
-            <nuxt-link class="nav-link mr-2" to="/cart">Cart({{getCartLength}})</nuxt-link>
+            <nuxt-link class="nav-link mr-2" to="/cart">Cart <span class="badge badge-secondary">{{getCartLength}}</span></nuxt-link>
           </template>
           <template v-else>
               <nuxt-link class="nav-link mr-2" to="/cart">Cart</nuxt-link>

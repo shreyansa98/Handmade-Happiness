@@ -67,7 +67,7 @@
                             <div class="a-spacing-top-large">
                                 <span class="a-button-register">
                                     <span class="a-button-inner">
-                                        <span class="a-button-text" @click="onUpdateProduct">
+                                        <span class="btn btn-small btn-dark" @click="onUpdateProduct">
                                             Update Product
                                         </span>
                                     </span>

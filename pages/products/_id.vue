@@ -94,18 +94,6 @@
                                  </div>
 
                                  <hr />
-                                 <template v-if="$auth.$state.loggedIn">
-                                <span class="a-declarative">
-                                    <nuxt-link to="/address" class="a-link-normal">
-                                        <div class="a-row a-spacing-mini">
-                                            <i class="fal fal-map-market-alt"></i>
-                                            <span class="a-size-small">Deliver to {{$auth.$state.user.address.city}}</span>
-                                        </div>
-                                    </nuxt-link>
-                                </span>
-                                </template>
-                                <br/>
-                                <hr/>
                             </div>
                         </div>
                     </div>

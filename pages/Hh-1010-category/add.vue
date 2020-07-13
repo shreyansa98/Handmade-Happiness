@@ -10,23 +10,25 @@
                         <div class="a-spacing-top-medium">
                             <label>Type</label>
                             <input class="a-input-text"  style="width: 100%" v-model="type" />
+
+                            <label class="choosefile-button">
+                            <input type="file" @change="onFileSelected" />
+                            </label>
+                            <p>{{fileName}}</p>
                         </div>
+                        <hr />
 
                         <!-- Button -->
                             <div class="a-spacing-top-large">
                                 <span class="a-button-register">
                                     <span class="a-button-inner">
-                                        <span class="a-button-text" @click="onAddCategory">
+                                        <span class="btn btn-small btn-dark" @click="onAddCategory">
                                             Add Category
                                         </span>
                                     </span>
                                 </span>
                             </div>
                     </form>
-                    <br>
-                    <ul class="list-group-item">
-                        <li v-for="category in categories" :key="category._id">{{category.type}}</li>
-                    </ul>
                      
                 </div>
                 <div class="col-sm-3"></div>
@@ -50,17 +52,26 @@ export default {
 
     data() {
         return{
-        type: ""
+        type: "",
+        selectedFile: null,
+        fileName: null
         }
     },
     methods: {
+        onFileSelected(){
+            this.selectedFile = event.target.files[0];
+            this.fileName = event.target.files[0].name
+        },
         async onAddCategory() {
             try{
-                let data = {type: this.type}
+                let data = new FormData();
+                data.append("type", this.type);
+                data.append("photo", this.selectedFile, this.selectedFile.name);
                 let response = await this.$axios.$post("/api/categories", data);
 
         
-                    this.categories.push(data);
+                 await this.categories.push(data);
+                    this.$router.push("/Hh-1010-category");
             } catch (err) {
                 console.log(err);
             }

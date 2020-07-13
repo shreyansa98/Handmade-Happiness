@@ -67,7 +67,7 @@
                             <div class="a-spacing-top-large">
                                 <span class="a-button-register">
                                     <span class="a-button-inner">
-                                        <span class="a-button-text" @click="onAddProduct">
+                                        <span class="btn btn-small btn-dark" @click="onAddProduct">
                                             Add Product
                                         </span>
                                     </span>
@@ -118,7 +118,6 @@ export default {
     methods: {
         onFileSelected(event) {
             this.selectedFile = event.target.files[0];
-            console.log(this.selectedFile); 
             this.fileName = event.target.files[0].name;
         },
 
@@ -132,7 +131,7 @@ export default {
             data.append("categoryID", this.categoryID);
             data.append("photo", this.selectedFile, this.selectedFile.name);
 
-            let result = await this.$axios.$post(`/api/products`, data);
+            let result = await this.$axios.$post('/api/products', data);
 
             this.$router.push("/Hh-1010-index");
         }

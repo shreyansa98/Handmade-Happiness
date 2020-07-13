@@ -6,7 +6,8 @@
                 <div class="col-sm-6">
                     <div class="a-spacing-top-medium"></div>
                     <h2>Profile Page</h2>
-                    <a href="#" @click="onLogout">Logout</a>
+                    <button class="btn btn-dark btn-small" @click="onLogout">Logout</button>
+                    <!-- <a href="#" @click="onLogout">Logout</a> -->
                     <form>
                         <!-- Name -->
                         <div class="a-spacing-top-medium">
@@ -80,9 +81,12 @@ export default {
 
         async onLogout(){
             await this.$auth.logout();
-            this.$router.push("/");
-        }
-    }
+            // this.$router.push("/");
+            res.redirect('/');
+        },
+        
     
 }
+}
+
 </script>

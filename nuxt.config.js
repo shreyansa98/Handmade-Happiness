@@ -128,8 +128,7 @@ export default {
         }
       },
       google: {
-        client_id: '303567690628-4bb98e9nc16uno918hecga17hotajp3t.apps.googleusercontent.com',
-        redirect_uri: 'https://shreyansa98.github.io/hh/home',
+        client_id: '303567690628-4bb98e9nc16uno918hecga17hotajp3t.apps.googleusercontent.com'
       }
     }
   }

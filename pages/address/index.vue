@@ -13,7 +13,7 @@
                       <small>Your Adresses</small>
               </div>
               <h3 class="a-spacing-medium a-spacing-top-medium">Your Addresses</h3>
-              <h6><a href="/address/add"
+              <h6><a href="/hh/address/add"
                       style="text-decoration:none;"
                     >
                       Add Address
@@ -53,7 +53,7 @@
                       </div>
                       <!-- Update Button -->
                       <div class="edit-address-desktop-link">
-                        <a :href="`/address/${address._id}`">Edit</a>
+                        <a :href="`/hh/address/${address._id}`">Edit</a>
                         &nbsp; | &nbsp;
                         <!-- Delete Button -->
                         <a href="#" @click="onDeleteAddress(address._id, index)">Delete</a>

@@ -70,7 +70,7 @@ export default {
      methods: {
          async onLogin() {
             try{
-                    this.$auth.loginWith("local", {
+                this.$auth.loginWith("local", {
                         data: {
                             email: this.email,
                             password: this.password
@@ -85,7 +85,8 @@ export default {
          },
          async google() {
              try{
-                 this.$auth.loginWith('google')
+                 let res = this.$auth.loginWith('social');
+                 console.log(res);
              }
              catch(err){
                  console.log(err);

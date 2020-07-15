@@ -15,7 +15,7 @@
                 <template v-if="$auth.$state.loggedIn">
                     <template v-if="$auth.$state.user.address">
                         <nuxt-link to="/address" class="nav-link btn">
-                        Deliver to - {{$auth.$state.user.address.city}}
+                        Deliver to - {{$auth.$state.user.address.streetAddress}}
                         </nuxt-link>
                     </template>
                     <template v-else>
@@ -49,6 +49,9 @@
             <template v-if="getCartLength > 0">
             <nuxt-link class="nav-link mr-2 btn" to="/cart">Cart <span class="badge badge-secondary">{{getCartLength}}</span></nuxt-link>
             </template>
+          <template v-else>
+            <nuxt-link class="nav-link mr-2 btn disabled" to="/cart">Cart <span class="badge badge-secondary">Empty</span></nuxt-link>
+          </template>
           </template>
           <template v-else>
             <nuxt-link to="/signup" class="nav-link btn">

@@ -83,14 +83,21 @@
                                  </div>
 
                                  <div class="a-section">
-                                     <div class="a-button-stack" @click="addProductToCart(product)">
-                                                   <button type="button" name="submit.add-to-cart" class="btn btn-secondary btn-sm btn-block mt-2" style="outline: none">Add to Cart</button>
-                                     </div>
-                                     <template v-if="getCartLength">
-                                        <nuxt-link to="/cart">
-                                            <button type="button" name="submit.add-to-cart" class="btn btn-secondary btn-sm btn-block mt-2" style="outline: none">Buy Now</button>
-                                        </nuxt-link>
-                                                   </template>
+                                     <template v-if="this.$auth.loggedIn">
+                                        <div class="a-button-stack" @click="addProductToCart(product)">
+                                                    <button type="button" name="submit.add-to-cart" class="btn btn-secondary btn-sm btn-block mt-2" style="outline: none">Add to Cart</button>
+                                        </div>
+                                        <template v-if="getCartLength">
+                                            <nuxt-link to="/cart">
+                                                <button type="button" name="submit.add-to-cart" class="btn btn-secondary btn-sm btn-block mt-2" style="outline: none">Buy Now</button>
+                                            </nuxt-link>
+                                        </template>
+                                     </template>
+                                     <template v-else>
+                                         <a href="/login" class="a-button-stack">
+                                                    <button type="button" name="submit.add-to-cart" class="btn btn-secondary btn-sm btn-block mt-2" style="outline: none">Add to Cart</button>
+                                        </a>
+                                     </template>
                                  </div>
 
                                  <hr />

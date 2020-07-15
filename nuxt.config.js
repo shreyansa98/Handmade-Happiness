@@ -129,8 +129,19 @@ export default {
           logout: true
         }
       },
-      google: {
-        client_id: '303567690628-4bb98e9nc16uno918hecga17hotajp3t.apps.googleusercontent.com'
+      social: {
+        _scheme: 'oauth2',
+        authorization_endpoint: 'https://accounts.google.com/o/oauth2/auth',
+        userinfo_endpoint: 'https://www.googleapis.com/oauth2/v3/userinfo',
+        scope: ['openid', 'profile', 'email'],
+        access_type: undefined,
+        access_token_endpoint: undefined,
+        response_type: 'token',
+        token_type: 'Bearer',
+        redirect_uri: 'https://shreyansa98.github.io/hh',
+        client_id: '303567690628-4bb98e9nc16uno918hecga17hotajp3t.apps.googleusercontent.com',
+        token_key: 'access_token',
+        state: 'UNIQUE_AND_NON_GUESSABLE'
       }
     }
   }

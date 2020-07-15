@@ -11,7 +11,7 @@
           <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12 mt-5">
             <div class="row row-cols-1 row-cols-md-3">
               <div class="col mb-4" v-for="product in products" :key="product._id">
-                <div class="card" style="width: 12rem;">
+                <div class="card h-100" style="width: 12rem;">
                             <img :src="product.photo" class="card-img-top">
                             <div class="card-body" style="background-color: beige">
                                 <h5 class="card-title">

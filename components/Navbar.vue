@@ -46,7 +46,7 @@
       </template>
       <li class="nav-item">
           <template v-if="$auth.$state.loggedIn">
-            <template v-if="getCartLength >= 0">
+            <template v-if="getCartLength > 0">
             <nuxt-link class="nav-link mr-2 btn" to="/cart">Cart <span class="badge badge-secondary">{{getCartLength}}</span></nuxt-link>
             </template>
           </template>

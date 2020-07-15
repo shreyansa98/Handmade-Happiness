@@ -4,7 +4,7 @@
       <div class="col mb-4" v-for="category in categories" :key="category._id">
         <nuxt-link :to="`/categories/${category._id}`">
         <div class="card h-100 text-dark haha" style="border-width: 0; border-radius: 10px; background: none;">
-          <img :src="category.photo" class="card-img-top" style="border-radius: 10px">
+          <img :src="category.photo" class="card-img-top try" style="border-radius: 10px">
           <h3 class="card-body mb-0" style="text-align: center; border-radius: 10px; background: none; color: #1E3D45">
             {{category.type}}
             <!-- <h3 class="card-title" style="text-align: center">{{category.type}}</h3> -->
@@ -40,6 +40,9 @@ export default {
 }
 .haha:hover > *{
   box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.try:hover{
+  transform: scale(0.98);
 }
 a:hover{
   text-decoration: none;

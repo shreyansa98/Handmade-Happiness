@@ -27,6 +27,8 @@ export default {
       { rel:"stylesheet", href:"https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-vue/2.15.0/bootstrap-vue.css' },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/fontawesome.min.css' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Exo:wght@500&display=swap'},
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap'}
       
       // { rel: 'stylesheet', href: '/css/font-awesome/css/all.css' },
       // { rel: 'stylesheet', href: '/css/default.css' }

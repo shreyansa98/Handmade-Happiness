@@ -5,7 +5,7 @@
     </navigation>
     <nuxt />
     <navigation v-if="showNavigation">
-    <Footer />
+    <!-- <Footer /> -->
     </navigation>
   </div>
 </template>
@@ -31,7 +31,11 @@ html{
 body {
   font-size: 13px;
   line-height: 19px;
-  color: #111;
-  background-image: linear-gradient(#e9dbff, #fff4db);
+  color: #1E3D45;
+  /* background-image: linear-gradient(#424242, #f7f7f7); */
+  background-image: linear-gradient(#E4DDF0, #DDF0DD);
+  /* font-family: 'Architects Daughter', cursive; */
+  font-family: 'Exo', sans-serif;;
+  /* background-color: #ebebeb; */
 }
 </style>

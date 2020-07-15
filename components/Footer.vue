@@ -29,9 +29,9 @@
     </div>
   </footer> -->
   <!--/FOOTER-->
-  <footer class="footer" style="background-color: #417494">
+  <footer class="footer d-none d-sm-block" style="background-color: #f7f7f7; color: #424242">
         <div class="container">
-            <p class="m-0 text-center text-white">Copyright © Handmade Happiness 2020</p>
+            <p class="m-0 text-center">Copyright © Handmade Happiness 2020</p>
         </div>
     </footer>
 </template>

@@ -54,7 +54,7 @@ body {
   background-repeat: no-repeat;
   opacity: 0;
   z-index: 0;
-  animation: imageAnimation 50s linear infinite; 
+  animation: imageAnimation 25s linear infinite; 
 }
 
 .slideshow li:nth-child(1) { 
@@ -62,19 +62,19 @@ body {
 }
 .slideshow li:nth-child(2) { 
   background-image: url(https://cdn.pixabay.com/photo/2015/05/07/15/08/pastries-756601_960_720.jpg);
-  animation-delay: 10s; 
+  animation-delay: 5s; 
 }
 .slideshow li:nth-child(3) { 
   background-image: url(https://cdn.pixabay.com/photo/2020/06/20/14/12/muffin-5321148_960_720.jpg);
-  animation-delay: 20s; 
+  animation-delay: 10s; 
 }
 .slideshow li:nth-child(4) { 
   background-image: url(https://cdn.pixabay.com/photo/2015/03/26/09/39/cupcakes-690040_960_720.jpg);
-  animation-delay: 30s; 
+  animation-delay: 15s; 
 }
 .slideshow li:nth-child(5) { 
   background-image: url(https://cdn.pixabay.com/photo/2020/04/20/17/42/chocolate-pudding-5069214_960_720.jpg);
-  animation-delay: 40s; 
+  animation-delay: 20s; 
 }
 
 @keyframes imageAnimation { 

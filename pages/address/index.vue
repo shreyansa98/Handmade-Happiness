@@ -25,8 +25,10 @@
               <br/>
               <div class="a-spacing-double-large mt-2">
                   <!-- Address -->
-                  <div class="col-lg-4 col-md-4 col-sm-12 pl-md-0 pb-2" v-for="(address, index) in addresses" :key="address._id">
-                    <div class="a-box a-spacing-none normal-desktop-address-tile border-left border-bottom mt-2 pl-2">
+                  <div class="row row-cols-1 row-cols-md-3 mt-10">
+                    <div class="col mb-4" v-for="(address, index) in addresses" :key="address._id">
+                      <div class="card h-100 text-dark haha" style="border-width: 0; border-radius: 10px; background: none;">
+                        <div class="a-box a-spacing-none normal-desktop-address-tile mt-2 pl-2">
                       <div class="a-box-inner a-padding-none">
                         <div class="address-section-no-default">
                           <div class="a-spacing-small">
@@ -62,15 +64,17 @@
                         <a href="#" @click="onSetDefault(address._id)">Set as Default</a>
                       </div>
                     </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              
 
                   </div>
-                  <div class="col-lg-4 col-md-3 col-sm-12"></div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
     <!--/REGISTER ADDRESS-->
   </main>
   <!--/MAIN-->
@@ -81,7 +85,6 @@ export default {
     async asyncData({$axios}){
         try{
             let response = await $axios.$get("/api/addresses");
-            console.log(response.addresses);
             return {
                 addresses: response.addresses
             }

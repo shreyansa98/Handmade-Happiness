@@ -58,14 +58,14 @@ body {
 }
 
 .slideshow li:nth-child(1) { 
-  background-image: url(https://cdn.pixabay.com/photo/2013/09/18/18/24/chocolate-183543_960_720.jpg) 
+  background-image: url(https://cdn.pixabay.com/photo/2020/06/20/14/12/muffin-5321148_960_720.jpg); 
 }
 .slideshow li:nth-child(2) { 
   background-image: url(https://cdn.pixabay.com/photo/2015/05/07/15/08/pastries-756601_960_720.jpg);
   animation-delay: 5s; 
 }
 .slideshow li:nth-child(3) { 
-  background-image: url(https://cdn.pixabay.com/photo/2020/06/20/14/12/muffin-5321148_960_720.jpg);
+  background-image: url(https://cdn.pixabay.com/photo/2013/09/18/18/24/chocolate-183543_960_720.jpg);
   animation-delay: 10s; 
 }
 .slideshow li:nth-child(4) { 

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="color: #1E3D45">
     <hr />
     <div class="reviewsMedley">
       <div class="row">
@@ -21,7 +21,7 @@
 
             <template>
               <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                <b-card no-body>
+                <b-card no-body style="background: rgba(0,0,0,0.1); border-radius: 10px">
 
                   <b-card-body
                     id="nav-scroller"
@@ -34,7 +34,7 @@
                   <div class="a-row a-spacing-top-small"></div>
                   <div class="a-spacing-small a-spacing-top-small">
                     
-                    <img class="img-fluid" width="22.5%" v-for="review in reviews" :key="review._id" :src="review.photo" style="padding-top: 5px"/>
+                    <img class="img-fluid px-2" width="22.5%" v-for="review in reviews" :key="review._id" :src="review.photo" style="padding-top: 5px"/>
                   </div>
                 </div>
                 </b-card-body>
@@ -62,7 +62,7 @@
 
 <template>
   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-5">
-    <b-card no-body>
+    <b-card no-body style="background: rgba(0,0,0,0.1); border-radius: 10px">
 
       <b-card-body
         id="nav-scroller"
@@ -74,17 +74,13 @@
               <!-- Reviews -->
               <div class="review-body" v-for="review in reviews" :key="review._id">
                 <div class="genome-widget">
-                  <a href="#">
                     <div class="profile-avatar">
                       <img
+                      style="border-radius: 50%"
                         src="https://images-na.ssl-images-amazon.com/images/S/amazon-avatars-global/default._CR0,0,1024,1024_SX48_.png"
                       />
+                      <h6 class="pl-3" style="display: inline"><small>{{review.user.name}}</small></h6>
                     </div>
-                    <!-- Review Owner -->
-                    <div class="profile-content">
-                      <span class="a-profile-name"><small>{{review.user.name}}</small></span>
-                    </div>
-                  </a>
                 </div>
                 <div class="a-row">
                   <!-- Review Star -->
@@ -104,7 +100,6 @@
                   <div
                     style="width: 1px !important; height: 15px !important; background-color: #ddd; display: inline-block; margin: 0px 5px -3px 5px;"
                   ></div>
-                  <span class="avp-badge a-color-state">Verified Purchase</span>
                 </div>
                 <!-- Review Body -->
                 <div class="review-body mt-2 mb-2">

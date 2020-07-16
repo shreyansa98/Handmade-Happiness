@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <main style="color: #1E3D45">
         <!-- Breadcrumbs -->
         <div class="a-spacing-top-medium"></div>
         <div class="container mt-2 mb-2">
@@ -23,7 +23,7 @@
                             <!-- Image -->
                             <div class="imgBlock">
                                 <div class="eBooksimg">
-                                    <img :src="product.photo" class="img-fluid" />
+                                    <img :src="product.photo" class="img-fluid" style="border-radius: 10px" />
                                 </div>
                             </div>
                             

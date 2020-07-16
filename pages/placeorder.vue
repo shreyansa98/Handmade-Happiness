@@ -1,7 +1,7 @@
 <template>
 <main>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="/"><img src="https://handmade-happiness-v1.s3.ap-south-1.amazonaws.com/logo.png" alt="logo" class="img-fluid" style="width: 240px; height: 33px"/></a>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #A497D1;box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19)">
+  <a class="navbar-brand" href="/hh" style="font-family: 'Architects Daughter', cursive;"><img src="https://handmade-happiness-v1.s3.ap-south-1.amazonaws.com/New+Project.png"/>Handmade Happiness</a>
 </nav>
 
       <div class="container mt-3">

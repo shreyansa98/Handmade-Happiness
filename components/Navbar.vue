@@ -1,5 +1,6 @@
 <template>
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #A497D1;box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19)">
+<!-- <nav class="navbar navbar-expand-lg navbar-dark" style="background-image: linear-gradient(to right, #DCECF0, #DFDBF0, #F0DFDB, #ECF0DB);box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19)"> -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-image: linear-gradient(to right,#6E5AA6, #945A80);box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19)">
   <!-- <a class="navbar-brand" href="/hh"><img src="https://handmade-happiness-v1.s3.ap-south-1.amazonaws.com/logo.png" alt="logo" class="img-fluid" style="width: 240px; height: 33px"/></a> -->
   <a class="navbar-brand" href="/hh" style="font-family: 'Architects Daughter', cursive;"><img src="https://handmade-happiness-v1.s3.ap-south-1.amazonaws.com/New+Project.png"/>Handmade Happiness</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

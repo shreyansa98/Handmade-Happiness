@@ -15,15 +15,19 @@
           <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12 mt-5">
             <div class="row row-cols-1 row-cols-md-3">
               <div class="col mb-4" v-for="product in products" :key="product._id">
-                <nuxt-link :to="`/products/${product._id}`">
+                
                 <div class="card text-dark h-100 haha" style="border-width: 0; border-radius: 10px; background: none;">
+                  <nuxt-link :to="`/products/${product._id}`">
                             <img :src="product.photo" class="card-img-top" style="border-radius: 10px">
+                  </nuxt-link>
                             <div class="card-body" style="text-align: center; border-radius: 10px; background: none; color: #1E3D45">
+                                <nuxt-link :to="`/products/${product._id}`">
                                 <h5 class="card-title" style="color: #1E3D45">
                                     
                                                 {{product.title}}
                                     
                                 </h5>
+                                </nuxt-link>
                                 <p class="card-text" style="float: right">
                                             <no-ssr>
                                                 <star-rating :rating="product.averageRating" :show-rating="false" :glow="1" :border-width="1" :rounded-corners="true" :read-only="true" :star-size="18" :star-points="[23,2,14,17,0,19,10,34,7,50,23,43,38,50,36,34,46,19,31,17]">
@@ -33,9 +37,13 @@
                                 </p>
                                 <p class="card-text"><small class="text-muted">by {{product.owner.name}}</small></p>
                                         <p class="card-text">Rs {{product.price}}</p>
+                                        <template v-if="$auth.$state.loggedIn">
+                                        <div class="a-button-stack" @click="addProductToCart(product)">
+                                                    <button type="button" name="submit.add-to-cart" class="btn btn-sm btn-block mt-2" style="outline: none; border-radius: 20px; background: rgba(0,0,0,0.3)">Add to Cart</button>
+                                        </div>
+                                        </template>
                             </div>
                         </div>
-                        </nuxt-link>
               </div>
             </div>
           </div>
@@ -50,6 +58,7 @@
 
 
 <script>
+import { mapActions } from "vuex";
 import StarRating from "vue-star-rating";
 export default {
   components: {
@@ -68,7 +77,10 @@ export default {
     } catch(err){
       console.log(err);
     }
-  }
+  },
+    methods: {
+        ...mapActions(["addProductToCart"])
+    }
 }
 
 </script>

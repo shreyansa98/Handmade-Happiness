@@ -29,14 +29,14 @@
                   <!-- Full name -->
                   <div class="form-group">
                     <label style="margin-bottom: 0px;">Full Name</label>
-                    <input type="text" class="a-input-text" style="width: 100%;" v-model="fullName" required />
+                    <input type="text" class="a-input-text form-control auth-autofocus auth-required-field auth-contact-verification-request-info" style="width: 100%;" v-model="fullName" required />
                   </div>
                   <!-- house Number -->
                   <div class="form-group">
                     <label style="margin-bottom: 0px;">House Number</label>
                     <input
                       type="text"
-                      class="a-input-text"
+                      class="a-input-text form-control auth-autofocus auth-required-field auth-contact-verification-request-info"
                       style="width: 100%;"
                       placeholder="Flat/House Number"
                       v-model="houseNumber"
@@ -48,7 +48,7 @@
                     <label style="margin-bottom: 0px;">Street Address</label>
                     <input
                       type="text"
-                      class="a-input-text"
+                      class="a-input-text form-control auth-autofocus auth-required-field auth-contact-verification-request-info"
                       style="width: 100%;"
                       placeholder="Street and number, P.O. box, c/o."
                       v-model="streetAddress"
@@ -58,22 +58,22 @@
                   <!-- City -->
                   <div class="form-group">
                     <label style="margin-bottom: 0px;">City</label>
-                    <input type="text" class="a-input-text" style="width: 100%;" v-model="city" required/>
+                    <input type="text" class="a-input-text form-control auth-autofocus auth-required-field auth-contact-verification-request-info" style="width: 100%;" v-model="city" required/>
                   </div>
                   <!-- State -->
                   <div class="form-group">
                     <label style="margin-bottom: 0px;">State / Province / Region</label>
-                    <input type="text" class="a-input-text" style="width: 100%;" v-model="state" required/>
+                    <input type="text" class="a-input-text form-control auth-autofocus auth-required-field auth-contact-verification-request-info" style="width: 100%;" v-model="state" required/>
                   </div>
                   <!-- Zip Code -->
                   <div class="form-group">
                     <label style="margin-bottom: 0px;">Pin Code</label>
-                    <input type="text" class="a-input-text" style="width: 100%;" v-model="pincode" required/>
+                    <input type="text" class="a-input-text form-control auth-autofocus auth-required-field auth-contact-verification-request-infot" style="width: 100%;" v-model="pincode" required/>
                   </div>
                   <!-- Phone Number -->
                   <div class="form-group">
                     <label style="margin-bottom: 0px;">Phone Number</label>
-                    <input type="text" class="a-input-text" style="width: 100%;" v-model="phoneNumber" required/>
+                    <input type="text" class="a-input-text form-control auth-autofocus auth-required-field auth-contact-verification-request-info" style="width: 100%;" v-model="phoneNumber" required/>
                     <div class="a-section a-spacing-none a-spacing-top-micro">
                       <span class="a-size-mini">May be used to assist delivery</span>
                     </div>
@@ -88,6 +88,7 @@
                     >Do we need additional instructions to find this address?</label>
                     <textarea
                       placeholder="Provide details such as building description, a nearby landmark, or other navigation instructions"
+                      class="a-input-text form-control auth-autofocus auth-required-field auth-contact-verification-request-info"
                       style="height:6em; width: 100%;"
                       v-model="deliveryInstructions" required
                     ></textarea>
@@ -97,7 +98,7 @@
                     <label
                       style="margin-bottom: 0px;"
                     >Do we need a security code or a call box number to access this building?</label>
-                    <input type="text" class="a-input-text" style="width: 100%;" placeholder="1234" v-model="securityCode" required/>
+                    <input type="text" class="a-input-text form-control auth-autofocus auth-required-field auth-contact-verification-request-info" style="width: 100%;" placeholder="1234" v-model="securityCode" required/>
                   </div>
 
                   <div class="a-spacing-top-medium"></div>

@@ -43,7 +43,7 @@
                                 <div class="a-row mb-4">
                                     <b>
                                         Dont have an account?
-                                        <a href="/signup" class="a-link-emphasis">Sign Up</a>
+                                        <a href="/hh/signup" class="a-link-emphasis">Sign Up</a>
                                     </b>
                                 </div>
                                  

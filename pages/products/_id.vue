@@ -94,7 +94,7 @@
                                         </template>
                                      </template>
                                      <template v-else>
-                                         <a href="/login" class="a-button-stack">
+                                         <a href="/hh/login" class="a-button-stack">
                                                     <button type="button" name="submit.add-to-cart" class="btn btn-secondary btn-sm btn-block mt-2" style="outline: none">Add to Cart</button>
                                         </a>
                                      </template>

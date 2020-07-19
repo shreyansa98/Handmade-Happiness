@@ -28,7 +28,7 @@
               <h2 class="a-spacing-base">Overall Rating</h2>
               <div class="a-row">
                 <!-- Rating -->
-                <star-rating v-model="rating"></star-rating>
+                <star-rating :star-size="25" :show-rating="false" :glow="1" :rounded-corners="true" v-model="rating"></star-rating>
               </div>
               <div class="a-row a-spacing-top-large mt-3">
                 <h4>Add photo or video</h4>
@@ -50,7 +50,7 @@
                 <h4 class="a-spacing-base">Add a headline</h4>
                 <input
                   type="text"
-                  class="a-input-text"
+                  class="a-input-text form-control auth-autofocus auth-required-field auth-contact-verification-request-info"
                   style="width: 70%;"
                   placeholder="What's most important to know?"
                   v-model="headline"
@@ -60,6 +60,7 @@
               <div class="a-spacing-base mt-2">
                 <h2 class="a-spacing-base">Write your review</h2>
                 <textarea
+                class="a-input-text form-control auth-autofocus auth-required-field auth-contact-verification-request-info"
                   placeholder="What do you like or dislike? What did you see this product for?"
                   style="height:6em; width: 100%;"
                   v-model="body"
@@ -76,6 +77,7 @@
               <div class="media a-spacing-top-large">
                 <div class="profile-avatar">
                       <img
+                      style="border-radius: 50%"
                         src="https://images-na.ssl-images-amazon.com/images/S/amazon-avatars-global/default._CR0,0,1024,1024_SX48_.png"
                       />
                     </div>

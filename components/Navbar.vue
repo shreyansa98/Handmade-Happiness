@@ -32,7 +32,7 @@
                     </template>
                     <template v-else>
                         <nuxt-link to="/address" class="nav-link btn">
-                            Add Address
+                            Add Address 
                         </nuxt-link>
                     </template>
                 

@@ -5,13 +5,13 @@
                 <div class="col-sm-3"></div>
                 <div class="col-sm-6">
                     <div class="a-spacing-top-medium"></div>
-                    <h2>Add a new Category</h2>
+                    <h2 class="mt-3" style="text-align: center">Add a new Category</h2>
                     <form>
                         <div class="a-spacing-top-medium">
                             <label>Type</label>
-                            <input class="a-input-text"  style="width: 100%" v-model="type" />
+                            <input class="a-input-text form-control auth-autofocus auth-required-field auth-contact-verification-request-info"  style="width: 100%" v-model="type" />
 
-                            <label class="choosefile-button">
+                            <label class="choosefile-button mt-3">
                             <input type="file" @change="onFileSelected" />
                             </label>
                             <p>{{fileName}}</p>

@@ -2,34 +2,19 @@
   <!--MAIN-->
   <main>
     <!--YOUR ORDER-->
-    <div class="container your-order">
+    <div class="container">
       <div class="row">
           <div class="a-spacing-large a-spacing-top-small a-subheader a-breadcrumb">
           <div class="row">
-            <div class="col-md-6 col-sm-5 col-12">
-              <h1 class="a-spacing-medium">All Orders</h1>
-            </div>
-            <nuxt-link to="/Hh-1010-index" class="a-button-history margin-right-10">Go to home page</nuxt-link>
-          </div>
-          <div class="a-row a-spacing-medium custom-view-options">
-            <ul class="a-unordered-list a-nostyle a-horizontal">
-              <li role="tab">
-                <span class="a-list-item"></span>
-              </li>
-              <li class="selected" role="tab">
-                <span class="a-list-item">
-                  <span class="item">Orders</span>
-                </span>
-              </li>
-            </ul>
+              <h1 class="a-spacing-medium" style="text-align: center">All Orders</h1>
           </div>
 
-          <div class="orderContent a-spacing a-spacing-top-medium" v-for="order in orders" :key="order._id">
-            <div class="orderContentHeader">
+          <div class="orderContent a-spacing a-spacing-top-medium mt-2" v-for="order in orders" :key="order._id">
+            <div class="orderContentHeader p-2 mt-2 border-bottom haha" style="border-radius: 10px">
               <div class="row">
                 <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
                   <div class="a-row">
-                    <span class="a-size-mini a-color-secondary">Total Amount to be recieved</span>
+                    <span class="a-size-mini a-color-secondary">Total Amount</span>
                     <br />
                     <span class="a-size-base a-text-bold a-color-secondary">Rs {{order.totalPrice}}</span>
                   </div>
@@ -39,36 +24,28 @@
                     <span class="a-size-mini a-color-secondary">SHIP TO</span>
                     <br />
                     <!-- Owner's name -->
-                    <a href class="a-size-base font-weight-bold a-link-normal">
                       {{ order.owner.name }}
-                      <i class="far fa-chevron-down"></i>
-                    </a>
                   </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-5 text-right">
                   <div class="a-row">
                     <span class="a-size-mini a-color-secondary">ORDER # {{order._id}}</span>
-                    <br />
-                    <a href="#" class="a-size-base font-weight-bold a-link-normal">Order Details</a>
-                    &nbsp;
-                    <div
-                      style="display: inline-block; background-color: #ddd; height: 15px; width: 2px; margin-bottom: -3px;"
-                    ></div>&nbsp;
-                    <a href="#" class="a-size-base font-weight-bold a-link-normal">Invoice</a>
                   </div>
                 </div>
               </div>
             </div>
             <!-- Orders body -->
-            <div class="orderContentBodyAlt">
+            <div class="orderContentBodyAlt p-2" style="background: rgba(0,0,0,0.1); border-radius: 10px">
               <div class="a-row">
-                <h1
+
+                <h3>{{ order.owner.name }}</h3>
+                <h6
                   class="a-size-medium a-text-bold"
                   style="color: #111 !important;font-family: 'MyWebFont',Arial,sans-serif !important; "
                 >
                   <!-- Estimated Delivery -->
                   Estimated Delivery - {{ order.estimatedDelivery}}
-                </h1>
+                </h6>
               </div>
               <!-- List of products from order -->
               <div v-for="product in order.products" :key="product._id">
@@ -113,7 +90,7 @@
                         Delivery Instructions: {{order.deliveryInstructions}}, Security Code: {{order.securityCode}}
                     </div>
                   </div>
-                </div>
+                </div><hr/>
               </div>
             </div>
           </div>

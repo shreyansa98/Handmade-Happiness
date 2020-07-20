@@ -9,20 +9,19 @@
                     <form>
                         <div class="a-spacing-top-medium">
                             <label>Name</label>
-                            <input class="a-input-text"  style="width: 100%" v-model="name" />
+                            <input class="a-input-text form-control auth-autofocus auth-required-field auth-contact-verification-request-info"  style="width: 100%" v-model="name" />
                         </div>
 
                         <div class="a-spacing-top-medium">
                             <label>About</label>
-                            <input class="a-input-text"  style="width: 100%" v-model="about" />
+                            <input class="a-input-text form-control auth-autofocus auth-required-field auth-contact-verification-request-info"  style="width: 100%" v-model="about" />
                         </div>
 
                          <!-- Photo -->
                             <div class="a-spacing-top-medium">
-                                <label style="margin-bottom: 0px">Add Photo</label>
+                                <label style="margin-bottom: 0px" class="mt-2">Add Photo</label>
                                 <div class="a-row a-spacing-top-medium">
                                     <label class="choosefile-button">
-                                        <i class="fal fa-plus"></i>
                                         <input type="file" @change="onFileSelected" />
                                         <p style="margin-top: -70px">
                                            {{ fileName}}
@@ -32,18 +31,14 @@
                             </div>
 
                         <!-- Button -->
-                            <div class="a-spacing-top-large">
-                                <span class="a-button-register">
-                                    <span class="a-button-inner">
-                                        <span class="a-button-text" @click="onAddOwner">
+                            <div class="a-spacing-top-large mt-2">
+                                        <span class="btn btn-sm btn-dark" @click="onAddOwner">
                                             Add Owner
-                                        </span>
-                                    </span>
                                 </span>
                             </div>
                     </form>
                     <br>
-                    <ul class="list-group-item">
+                    <ul class="list-group-item" style="background: rgba(0,0,0,0.1); border-radius: 10px">
                         <li v-for="owner in owners" :key="owner._id">{{owner.name}}</li>
                     </ul>
                      

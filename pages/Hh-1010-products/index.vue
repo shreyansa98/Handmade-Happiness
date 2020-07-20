@@ -28,25 +28,25 @@
                             <!-- Title -->
                             <div class="a-spacing-top-medium">
                                 <label style="margin-bottom: 0px">Title</label>
-                                <input type="text" class="a-input-text" style="width: 100%" v-model="title" />
+                                <input type="text" class="a-input-text form-control auth-autofocus auth-required-field auth-contact-verification-request-info" style="width: 100%" v-model="title" />
                             </div>
 
                              <!-- Price -->
                             <div class="a-spacing-top-medium">
                                 <label style="margin-bottom: 0px">Price</label>
-                                <input type="number " class="a-input-text" style="width: 100%" v-model="price" />
+                                <input type="number " class="a-input-text form-control auth-autofocus auth-required-field auth-contact-verification-request-info" style="width: 100%" v-model="price" />
                             </div>
 
                             <!-- stockQuantity -->
                             <div class="a-spacing-top-medium">
                                 <label style="margin-bottom: 0px">Stock Quantity</label>
-                                <input type="number " class="a-input-text" style="width: 100%" v-model="stockQuantity" />
+                                <input type="number " class="a-input-text form-control auth-autofocus auth-required-field auth-contact-verification-request-info" style="width: 100%" v-model="stockQuantity" />
                             </div>
 
                              <!-- Description -->
                             <div class="a-spacing-top-medium">
                                 <label style="margin-bottom: 0px">Description</label>
-                                <textarea placeholder="Product Description" style="width: 100%" v-model="description"></textarea>
+                                <textarea class="a-input-text form-control auth-autofocus auth-required-field auth-contact-verification-request-info" placeholder="Product Description" style="width: 100%" v-model="description"></textarea>
                             </div>
 
                             <!-- Photo -->
@@ -54,7 +54,6 @@
                                 <label style="margin-bottom: 0px">Add Photo</label>
                                 <div class="a-row a-spacing-top-medium">
                                     <label class="choosefile-button">
-                                        <i class="fal fa-plus"></i>
                                         <input type="file" @change="onFileSelected" />
                                         <p style="margin-top: -70px">
                                            {{ fileName}}

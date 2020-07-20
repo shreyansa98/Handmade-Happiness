@@ -1,13 +1,11 @@
 <template>
 <body>
     <main>
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
-                <div class="col-sm-3"></div>
-                <div class="col-sm-6">
-                    <div class="a-section">
+                    <div class="col-12">
                         <div class="a-spacing-top-medium"></div>
-                        <h2 style="text-align: center">Update {{product.title}}</h2>
+                        <h2 class="mt-2" style="text-align: center">Update {{product.title}}</h2>
                         <form>
                             <!-- Category Dropdown -->
                             <div class="a-spacing-top-medium">
@@ -28,25 +26,25 @@
                             <!-- Title -->
                             <div class="a-spacing-top-medium">
                                 <label style="margin-bottom: 0px">Title</label>
-                                <input type="text" class="a-input-text" style="width: 100%" v-model="title" :placeholder="product.title"/>
+                                <input type="text" class="a-input-text form-control auth-autofocus auth-required-field auth-contact-verification-request-info" style="width: 100%" v-model="title" :placeholder="product.title"/>
                             </div>
 
                              <!-- Price -->
                             <div class="a-spacing-top-medium">
                                 <label style="margin-bottom: 0px">Price</label>
-                                <input type="number" class="a-input-text" style="width: 100%" v-model="price" :placeholder="product.price"/>
+                                <input type="number" class="a-input-text form-control auth-autofocus auth-required-field auth-contact-verification-request-info" style="width: 100%" v-model="price" :placeholder="product.price"/>
                             </div>
 
                             <!-- stockQuantity -->
                             <div class="a-spacing-top-medium">
                                 <label style="margin-bottom: 0px">Stock Quantity</label>
-                                <input type="number" class="a-input-text" style="width: 100%" v-model="stockQuantity" :placeholder="product.stockQuantity"/>
+                                <input type="number" class="a-input-text form-control auth-autofocus auth-required-field auth-contact-verification-request-info" style="width: 100%" v-model="stockQuantity" :placeholder="product.stockQuantity"/>
                             </div>
 
                              <!-- Description -->
                             <div class="a-spacing-top-medium">
                                 <label style="margin-bottom: 0px">Description</label>
-                                <textarea style="width: 100%" v-model="description" :placeholder="product.description"></textarea>
+                                <textarea class="a-input-text form-control auth-autofocus auth-required-field auth-contact-verification-request-info" style="width: 100%" v-model="description" :placeholder="product.description"></textarea>
                             </div>
 
                             <!-- Photo -->
@@ -54,7 +52,6 @@
                                 <label style="margin-bottom: 0px">Add Photo</label>
                                 <div class="a-row a-spacing-top-medium">
                                     <label class="choosefile-button">
-                                        <i class="fal fa-plus"></i>
                                         <input type="file" @change="onFileSelected" />
                                         <p style="margin-top: -70px">
                                            {{ fileName}}
@@ -75,8 +72,6 @@
                             </div>
                         </form>
                     </div>
-                </div>
-                <div class="col-sm-3"></div>
             </div>
         </div>
     </main>

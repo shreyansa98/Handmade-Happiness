@@ -12,7 +12,7 @@
                             <!-- Title -->
                             <div class="a-spacing-top-medium">
                                 <label style="margin-bottom: 0px">Type</label>
-                                <input type="text" class="a-input-text" style="width: 100%" v-model="type" :placeholder="category.type"/>
+                                <input type="text" class="a-input-text form-control auth-autofocus auth-required-field auth-contact-verification-request-info" style="width: 100%" v-model="type" :placeholder="category.type"/>
                             </div>
 
                             <!-- Photo -->

@@ -15,7 +15,7 @@
       <li class="nav-item">
                 <template v-if="$auth.$state.loggedIn">
                     <template v-if="$auth.$state.user.email === 'ipsa@gmail.com'">
-                        <nuxt-link to="/hh/Hh-1010-index" class="nav-link btn">
+                        <nuxt-link to="/Hh-1010-index" class="nav-link btn">
                         Admin
                         </nuxt-link>
                     </template>

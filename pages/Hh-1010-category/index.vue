@@ -2,7 +2,7 @@
   <main class="listingPage">
         <div class="container">
           <br/>
-          <a href="/Hh-1010-category/add" class="btn btn-small btn-dark mb-5" style="border-radius: 20px; width: 100%">Add a new Category</a>
+          <a href="/hh/Hh-1010-category/add" class="btn btn-small btn-dark mb-5" style="border-radius: 20px; width: 100%">Add a new Category</a>
           <template>
             <div role="tablist" v-for="category in categories" :key="category._id" class="col-12 mx-auto" style="background: rgba(0,0,0,0.1); border-radius: 10px">
               <div class="row my-2">
